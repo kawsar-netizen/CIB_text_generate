@@ -69,6 +69,13 @@ Route::get("cib/download/{subject}/{contract}/{date}", 'Cib\Process\CibDownloadC
 
 // Coding by Sizar start
 
+ //last working route start
+
+Route::get('cib/db/text/file/download/index', 'Cib\Text\CibBBTextController@db_textfile_index')->name('cib.db.file.generate.index');
+Route::post('cib/db/text/file/download/store','Cib\Text\CibBBTextController@db_textfile_store')->name('cib.db.file.generate.store');
+
+ //last working route start
+
 // Start -:- CibDataTextController
 Route::get('cib/text/data/download/index', 'Cib\Text\CibDataTextController@index')->name('cib.text.data.download.index');
 Route::post('cib/text/data/generate/subject/index/text_generate','Cib\Text\CibDataTextController@subjectTextGenerate')->name('subject_text');
